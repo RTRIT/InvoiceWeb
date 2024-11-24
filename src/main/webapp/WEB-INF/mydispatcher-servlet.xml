@@ -24,29 +24,29 @@
     <mvc:resources mapping="/resources/**" location="/resources/" ></mvc:resources>
 
     <!-- Ket noi CSDL -->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/QLSP" />
-        <property name="username" value="root" />
-        <property name="password" value="Tringuyen2003z" />
-    </bean>
+<!--    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/QLSP" />-->
+<!--        <property name="username" value="root" />-->
+<!--        <property name="password" value="Tringuyen2003z" />-->
+<!--    </bean>-->
 
     <!-- Hibernate sessionFactory -->
-    <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-                <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
-            </props>
-        </property>
-        <property name="packagesToScan" value="ptit.bean" />
-    </bean>
+<!--    <bean id="sessionFactory"-->
+<!--          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource" />-->
+<!--        <property name="hibernateProperties">-->
+<!--            <props>-->
+<!--                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>-->
+<!--                <prop key="hibernate.show_sql">true</prop>-->
+<!--                <prop key="hibernate.hbm2ddl.auto">update</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--        <property name="packagesToScan" value="ptit.bean" />-->
+<!--    </bean>-->
 
-    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="dataSource"></property>
-    </bean>
+<!--    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">-->
+<!--        <property name="dataSource" ref="dataSource"></property>-->
+<!--    </bean>-->
 
 </beans>
