@@ -17,6 +17,8 @@
 
     <!-- Enable component scanning -->
     <context:component-scan base-package="controller" />
+    <context:component-scan base-package="service,controller" />
+
 
     <!-- Spring MVC Annotation -->
     <context:annotation-config />
@@ -48,5 +50,20 @@
 <!--    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">-->
 <!--        <property name="dataSource" ref="dataSource"></property>-->
 <!--    </bean>-->
+<!--     MAIl config-->
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="username" value="nguyentranhungbien@gmail.com" />
+        <property name="password" value="rchk ibbn irdm iphc" />
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+            </props>
+        </property>
+    </bean>
 
 </beans>
