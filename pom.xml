@@ -76,8 +76,6 @@
         <version>4.3.25.RELEASE</version>
       </dependency>
 
-
-
       <!-- slf4j-api -->
       <dependency>
           <groupId>org.slf4j</groupId>
