@@ -9,63 +9,104 @@
   <url>http://maven.apache.org</url>
   <dependencies>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>5.3.23</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-jpa</artifactId>
-      <version>3.4.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate.javax.persistence</groupId>
-      <artifactId>hibernate-jpa-2.1-api</artifactId>
-      <version>1.0.0.Final</version>
-    </dependency>
+      <!-- JUnit for testing -->
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>3.8.1</version>
+          <scope>test</scope>
+      </dependency>
 
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>5.6.15.Final</version>
-    </dependency>
+      <!-- Spring Web MVC -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>5.3.23</version>
+      </dependency>
 
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.30</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.validation</groupId>
-      <artifactId>jakarta.validation-api</artifactId>
-      <version>3.1.0</version>
-    </dependency>
+      <!-- Spring Data JPA -->
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-jpa</artifactId>
+        <version>3.4.0</version>
+      </dependency>
 
-    <!--    <dependency>-->
-<!--      <groupId>jakarta.servlet</groupId>-->
-<!--      <artifactId>jakarta.servlet-api</artifactId>-->
-<!--      <version>5.0.0</version>-->
-<!--      <scope>provided</scope>-->
-<!--    </dependency>-->
 
-    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
-<!--    <dependency>-->
-<!--      <groupId>org.apache.tomcat</groupId>-->
-<!--      <artifactId>tomcat-catalina</artifactId>-->
-<!--      <version>11.0.1</version>-->
-<!--    </dependency>-->
+      <!-- Hibernate Core -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>4.3.11.Final</version>
+      </dependency>
+
+      <!-- Lombok -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.30</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!-- Validation -->
+      <dependency>
+        <groupId>jakarta.validation</groupId>
+        <artifactId>jakarta.validation-api</artifactId>
+        <version>3.1.0</version>
+      </dependency>
+
+      <!-- MySQL Connector -->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.33</version>
+      </dependency>
+
+      <!-- JDBC -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>5.3.23</version>
+      </dependency>
+
+      <!-- Spring ORM -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>4.3.25.RELEASE</version>
+      </dependency>
+
+      <!-- slf4j-api -->
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>2.0.16</version>
+      </dependency>
+
+      <!-- java servlet, jsp, jstl   -->
+
+<!--      <dependency>-->
+<!--          <groupId>javax.servlet</groupId>-->
+<!--          <artifactId>javax.servlet-api</artifactId>-->
+<!--          <version>3.0.1</version>-->
+<!--          <scope>provided</scope>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>javax.servlet.jsp</groupId>-->
+<!--          <artifactId>jsp-api</artifactId>-->
+<!--          <version>2.1</version>-->
+<!--          <scope>provided</scope>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>javax.servlet</groupId>-->
+<!--          <artifactId>jstl</artifactId>-->
+<!--          <version>1.2</version>-->
+<!--      </dependency>-->
+
 
 
   </dependencies>
+
   <build>
     <finalName>InvoiceWeb</finalName>
   </build>
