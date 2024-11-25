@@ -1,10 +1,6 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.*;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 

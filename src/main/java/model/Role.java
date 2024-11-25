@@ -1,17 +1,14 @@
 package model;
 
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import javax.persistence.*;
 import java.util.List;
 
 
 @Entity
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "Role")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Role {

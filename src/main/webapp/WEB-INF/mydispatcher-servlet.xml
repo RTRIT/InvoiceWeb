@@ -4,10 +4,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:context="http://www.springframework.org/schema/context"
         xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
         xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
     <!-- Configure view resolver -->
     <bean id = 'viewResolver' name="viewResolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
@@ -16,7 +18,8 @@
 
 
     <!-- Enable component scanning -->
-    <context:component-scan base-package="controller" />
+    <context:component-scan base-package="controller,service,repository" />
+    <jpa:repositories base-package="repository" />
 
     <!-- Spring MVC Annotation -->
     <context:annotation-config />
@@ -28,7 +31,7 @@
 <!--        <property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
 <!--        <property name="url" value="jdbc:mysql://localhost:3306/QLSP" />-->
 <!--        <property name="username" value="root" />-->
-<!--        <property name="password" value="Tringuyen2003z" />-->
+<!--        <property name="password" value="1234" />-->
 <!--    </bean>-->
 
     <!-- Hibernate sessionFactory -->
