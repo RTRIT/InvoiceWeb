@@ -4,22 +4,23 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
+import org.springframework.stereotype.Repository;
 import model.Vendor;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
+import java.util.*;
 import javax.transaction.Transactional;
 
+@Repository
 public interface VendorRepository extends JpaRepository<Vendor, Long> {
 
         boolean existsByEmail(String email);
 
         boolean existsByPhonenumber(String phonenumber);
 
-        //findbyvendorid
+        // Get all vendors
+        @Query(value = "SELECT * FROM vendor", nativeQuery = true)
+        List<Vendor> getAllVendors();
+
+        // findbyvendorid
         Optional<Vendor> findByVendorid(UUID vendorid);
 
         // Get vendor by lastname
@@ -29,10 +30,6 @@ public interface VendorRepository extends JpaRepository<Vendor, Long> {
         // Get vendor by vendorID
         @Query(value = "SELECT * FROM vendor WHERE vendorid = :vendorid", nativeQuery = true)
         Vendor getVendorByVendorId(@Param("vendorid") UUID vendorid);
-
-        // Get all vendors
-        @Query(value = "SELECT * FROM vendor", nativeQuery = true)
-        List<Vendor> getAllVendors();
 
         // Create vendor with address
         @Transactional

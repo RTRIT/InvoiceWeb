@@ -2,13 +2,9 @@ package dto.requests;
 
 
 import jakarta.validation.constraints.Email;
-import lombok.*;
 import model.Vendor;
 import model.VendorAddress;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class VendorCreationRequest {
 
     @Email(message = "Email is not validated!")

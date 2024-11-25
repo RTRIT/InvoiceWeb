@@ -1,11 +1,6 @@
 package dto.response;
 
 import java.util.UUID;
-import lombok.*;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class VendorResponse {
     private UUID vendorid;
     private String firstname;

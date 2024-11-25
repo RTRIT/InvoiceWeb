@@ -1,9 +1,5 @@
 package dto.response;
-import lombok.*;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class VendorAddressResponse {
     private String street;
     private String city;
