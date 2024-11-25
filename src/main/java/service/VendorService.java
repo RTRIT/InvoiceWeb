@@ -17,11 +17,14 @@ import java.util.stream.Collectors;
 @Service
 public class VendorService {
 
-    @Autowired
     private VendorRepository vendorRepository;
+    private VendorAddressRepository vendorAddressRepository;
 
     @Autowired
-    private VendorAddressRepository vendorAddressRepository;
+    public VendorService(VendorRepository vendorRepository, VendorAddressRepository vendorAddressRepository) {
+        this.vendorRepository = vendorRepository;
+        this.vendorAddressRepository = vendorAddressRepository;
+    }
 
     // Get all vendors
     public List<VendorResponse> getAllVendors() {
